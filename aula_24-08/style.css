@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap');
+
+:root {
+    --lilas: #8b7bb8;
+    --lilas-claro: #b8a9d9;
+    --lavanda: #e4defa;
+    --lavanda-suave: #f1eefb;
+    --lua: #fdfcff;
+    --uva: #6b5b95;
+    --texto: #4a4458;
+    --texto-suave: #837a95;
+    --erro: #c98fb0;
+    --sombra: rgba(107, 91, 149, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--texto);
+    background: radial-gradient(circle at 15% 10%, #efe9fb 0%, transparent 45%),
+        radial-gradient(circle at 85% 90%, #e6ddf7 0%, transparent 45%),
+        linear-gradient(160deg, #f6f3fc 0%, #ece5f8 60%, #e3d9f4 100%);
+    padding: 48px 16px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    content: "✿";
+    position: fixed;
+    font-size: 90px;
+    color: var(--lilas-claro);
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+body::before {
+    top: -20px;
+    left: -30px;
+    transform: rotate(-15deg);
+}
+
+body::after {
+    bottom: -20px;
+    right: -30px;
+    transform: rotate(20deg);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--uva);
+    font-size: 2.4rem;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 14px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, transparent, var(--lilas), transparent);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--lilas-claro), transparent);
+    max-width: 480px;
+    margin: 20px auto;
+}
+
+form {
+    max-width: 480px;
+    margin: 0 auto;
+    background: var(--lua);
+    border-radius: 28px;
+    padding: 40px 36px;
+    box-shadow: 0 20px 45px var(--sombra), 0 2px 8px rgba(107, 91, 149, 0.08);
+    border: 1px solid #ede8f8;
+    position: relative;
+}
+
+label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--uva);
+    margin-bottom: 6px;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--uva);
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px 16px;
+    margin-top: 6px;
+    border: 1.5px solid var(--lavanda);
+    border-radius: 14px;
+    background-color: var(--lavanda-suave);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95rem;
+    color: var(--texto);
+    transition: all 0.25s ease;
+}
+
+input::placeholder {
+    color: var(--texto-suave);
+    font-style: italic;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--lilas);
+    background-color: var(--lua);
+    box-shadow: 0 0 0 4px rgba(139, 123, 184, 0.15);
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: var(--erro);
+}
+
+/* campos preenchidos automaticamente pela busca de CEP */
+input:disabled {
+    background-color: #ece7f7;
+    border-style: dashed;
+    color: var(--texto-suave);
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+button[type="submit"] {
+    width: 100%;
+    margin-top: 12px;
+    padding: 15px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--lilas) 0%, var(--uva) 100%);
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(107, 91, 149, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(107, 91, 149, 0.45);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+button[type="submit"]::before {
+    content: "✿ ";
+}
