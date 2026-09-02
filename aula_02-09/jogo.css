@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Quicksand:wght@500;600;700&display=swap');
+
+:root {
+  --bg-lavender: #f6eefb;
+  --bg-dot: #e3c9f2;
+  --pink-soft: #fbd6ec;
+  --purple-mid: #b98ce0;
+  --purple-deep: #6c3fa0;
+  --purple-accent: #9b6fc9;
+  --tile-bg: #fdf3fb;
+  --tile-border: #c9a6e8;
+  --tile-shadow: rgba(107, 63, 160, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* body vira um grid de 3 colunas. h1/hr/h2/br ocupam a linha toda,
+   e os 9 botoes (nessa ordem de criacao no JS) caem sozinhos
+   em 3 colunas x 3 linhas, formando o tabuleiro */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, clamp(66px, 20vw, 92px));
+  justify-content: center;
+  align-content: center;
+  gap: 8px;
+  padding: 2.5rem 1rem;
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--bg-lavender);
+  background-image: radial-gradient(var(--bg-dot) 1.6px, transparent 1.6px);
+  background-size: 22px 22px;
+  text-align: center;
+}
+
+h1,
+hr,
+h2 {
+  grid-column: 1 / -1;
+}
+
+br {
+  display: none;
+}
+
+h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 6vw, 2.4rem);
+  color: var(--purple-deep);
+  margin: 0.4rem 0 0.6rem;
+  transform: rotate(-1deg);
+}
+
+hr {
+  width: 140px;
+  border: none;
+  border-top: 3px dashed var(--purple-mid);
+  margin: 0.4rem auto 1.2rem;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--purple-accent);
+  margin: 0 0 0.8rem;
+}
+
+/* botoes do tabuleiro (bt0 0, bt0 1... via id) */
+button[id^="bt"] {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 18px;
+  border: 2px dashed var(--tile-border);
+  background: var(--tile-bg);
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(1.6rem, 6vw, 2.1rem);
+  color: var(--purple-deep);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 4px 0 rgba(185, 140, 224, 0.25);
+}
+
+button[id^="bt"]:hover {
+  background: var(--pink-soft);
+  transform: translateY(-3px) rotate(-3deg);
+  box-shadow: 0 6px 0 rgba(185, 140, 224, 0.3);
+}
+
+button[id^="bt"]:active {
+  transform: scale(0.92);
+  box-shadow: 0 2px 0 rgba(185, 140, 224, 0.3);
+}
+
+button[id^="bt"]:focus-visible {
+  outline: 3px solid var(--purple-accent);
+  outline-offset: 3px;
+}
