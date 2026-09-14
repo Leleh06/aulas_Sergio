@@ -1,0 +1,69 @@
+/* body {
+    background-color: #f7ecf9;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    color: #8a4baf;
+    font-size: 42px;
+    text-shadow: 2px 2px #e6c9f0;
+}
+
+h2 {
+    color: #b06bd6;
+    font-size: 20px;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    width: 60%;
+    background-color: #d9a6ef;
+    margin: 15px auto;
+} */
+
+button{
+    width: 100px;
+    border-width: 6px;
+    height: 100px;
+    line-height: 100px;
+    /* background-color: transparent; */
+    font-size: 40px;
+    font-weight: bold;
+    color: #6a2c91;
+    border-left: 0;
+    border-top: 0;
+    /* border-color: #c48be0; */
+    /* border-style: solid; */
+    vertical-align: top;
+}
+
+#btJogo{
+    border-top: 100px;
+    border-color: black;
+    border-width: 6px;
+}
+
+
+/* button:hover{
+    background-color: #d6bee4;
+    cursor: pointer;
+}
+.btJogo0, .btJogo1{
+    padding-top: 0;
+    margin-top: 0;
+}
+.btJogo2{
+    border-bottom: 0;
+}
+#bt02, #bt12, #bt22{
+    border-right: 0;
+} */
+
+/* button:disabled{
+    border-color: black;
+    color: #b06bd6;
+    background-color: #f3d9fb;
+} */
