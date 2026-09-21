@@ -1,0 +1,18 @@
+button{
+    width: 100px;
+    border-width: 6px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 40px;
+    font-weight: bold;
+    /* color: #6a2c91; */
+    border-left: 0;
+    border-top: 0;
+    vertical-align: top;
+}
+
+#btJogo{
+    border-top: 100px;
+    border-color: black;
+    border-width: 6px;
+}

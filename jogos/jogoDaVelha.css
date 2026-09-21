@@ -1,0 +1,98 @@
+/* Tema: caderno quadriculado lilás, tabuleiro em caneta uva */
+
+body {
+    background-color: #f3eefb;
+    background-image:
+        linear-gradient(#e2d6f5 1px, transparent 1px),
+        linear-gradient(90deg, #e2d6f5 1px, transparent 1px);
+    background-size: 26px 26px;
+    font-family: 'Segoe Print', 'Bradley Hand', 'Comic Sans MS', cursive;
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #4b1d85;
+    font-size: 44px;
+    margin: 10px 0;
+    transform: rotate(-1.5deg);
+}
+
+h2 {
+    color: #7d5fa8;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+h3 {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 2px 14px;
+    background-color: #6a2fb8;
+    color: #ffffff;
+    font-size: 20px;
+    transform: rotate(1deg);
+}
+
+h3:empty {
+    display: none;
+}
+
+hr {
+    border: none;
+    height: 4px;
+    width: 55%;
+    background-color: #6a2fb8;
+    border-radius: 4px;
+    margin: 15px auto;
+    opacity: 0.85;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    padding: 0;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 46px;
+    font-weight: bold;
+    color: #111;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #6a2fb8;
+    border-left: 0;
+    border-top: 0;
+    vertical-align: top;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #e4d6f7;
+}
+
+button:focus-visible {
+    outline: 3px dashed #4b1d85;
+    outline-offset: -8px;
+}
+
+.btJogo0, .btJogo1 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.btJogo2 {
+    border-bottom: 0;
+}
+
+#bt02, #bt12, #bt22 {
+    border-right: 0;
+}
+
+button:disabled {
+    cursor: default;
+}
