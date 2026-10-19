@@ -23,4 +23,16 @@ export async function connect() { // Singleton
     return pool.connect()
 }
 
+export async function selectClientes() {
+    const client = await connect()
+    const res = await client.query("SELECT * FROM cliente")
+    return res.rows
+}
+
+export async function insertCliente(cliente) {
+    const client = await connect()
+    await client.query("INSERT INTO cliente (nome,sobrenome,email,telefone) VALUES($1,$2,$3,$4)", [cliente.nome, cliente.sobrenome, cliente.email, cliente.telefone])
+
+}
+
 connect()
